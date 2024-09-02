@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Us Awake</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <a class="text-logo" href="usaawake.html"> USA<span>Awake</span></a>
+      <div class="option-menu">
+        <img class="hamburger-menu" src="images/Menu.svg" alt="HamburgerMenu">
+        <nav>
+          <ul class="contacts">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="account">
+            <li><button class="login" id="signin-button">Sign In</button></li>
+            <li><button class="sign-up" id="signup-button">Sign Up</button></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <section class="hero">
+    <div class="container">
+      <div class="big-question">
+        <h1>The Us is Awake </h1>
+        <p>Please select a location on the map</p>
+      </div>
+      <div class="flex-div-map">
+        <img class="us-map" src="images/Us-map.svg" alt="interactive-usa-map" usemap="#us-map">
+        <a class="left-click-map map-area" id="west-area">
+        </a>
+        <a class="mid-click-map map-area" id="central-area">
+        </a>
+        <a class="right-click-map map-area" id="east-area">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-bar">
+    <div class="container">
+      <h2>Where would you like to go?</h2>
+      <div class="input-bar">
+        <form action="">
+          <input type="text" id="search" onkeyup="filterSearch()" name="search" placeholder="Type a location">
+        </form>
+        <!-- <button class="button-to-search" type="button">Search</button> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="travel-expiriences">
+    <div class="container">
+      <ul class="first-column">
+        <ul>
+          <li class="searchable" draggable="true">
+            <img src="images/California.jpg" alt="California">
+            <h3>California</h3>
+            <p>There’s no other place I’d rather call home in the U.S. than California — truly. While I was growing up
+              on the East Coast I always dreamed of being one of those California beach babes with the flowing blonde
+              locks driving a convertible down PCH. I have yet to get that convertible, but I have lived in LA on and
+              off for almost 8 years now, and I can wholeheartedly say that my love for this state has only grown. It’s
+              about time I wrote a full travel guide to California, right?!</p>
+          </li>
+          <li class="searchable">
+            <img src="images/Oregon.jpg" alt="Oregon">
+            <h3>Oregon</h3>
+            <p>Oregon’s public rest area system has a lengthy history of welcoming travelers and providing safe clean
+              facilities for motorists to refresh. At OTE managed rest areas, dedicated employees provide a range of
+              services. From helping families find lost keys and pets to ensuring that the grounds are free from
+              obstructions and hazards, our specialists are present during peak travel hours, seven days per week and on
+              holidays.</p>
+          </li>
+          <li class="searchable">
+            <img src="images/nevada.jpg" alt="Nevada">
+            <h3>Nevada</h3>
+            <p>Visit Nevada for the golden-hour ghost towns, intriguing attractions and far-out art; stay for the cafe
+              classics, sagebrush saloons, and surprising scenery. Nevada offers let’s-see-what-happens adventure
+              everywhere you look, and touring NV is the best way to explore it. Find your own Nevada adventure.</p>
+          </li>
+        </ul>
+
+      </ul>
+      <ul class="second-column">
+        <ul>
+          <li class="searchable">
+            <img src="images/nebraska.jpg" alt="Nebraska">
+            <h3>Nebraska</h3>
+            <p>Nebraska has wonders in every direction: vast grasslands in the east, majestic cliffs and peaks in the
+              west, and sand dunes in the center, making your trip as scenic as it is fun. The state has a rich history
+              and provides many opportunities to explore its heritage. After listening to the stories, create your own.
+              Tour the Ashfall Fossil Beds State Historical Park, embark on an adventure along the Lewis and Clark
+              Trail, or explore a historic military fort. No matter where you go or where you are from: you will always
+              be greeted with a warm smile.</p>
+          </li>
+          <li class="searchable">
+            <img src="images/illinois.jpg" alt="Illinois">
+            <h3>Illinois</h3>
+            <p>Illinois is probably best known for Chicago, a world-class city considered by many to be the cultural
+              center of the United States. ChicagoIt has it all: famous museums, impressive architecture, and
+              Michelin-starred restaurants. But what surprises visitors the most are the more than 40 kilometers of
+              ocean-like beach, just a short walk from the city center and shops. A little further out of the city is
+              Chicagoland, a metropolitan area known for its unique attractions like Frank Lloyd</p>
+          </li>
+          <li class="searchable">
+            <img src="images/colorado.jpg" alt="Colorado">
+            <h3>Colorado</h3>
+            <p>n a state as geographically diverse as Colorado, even the typical Centennial State experience resists the
+              idea of pigeonholing; you’ll find everything from high desert to sand dunes to towering fourteeners within
+              our borders, all begging for enthusiastic exploration. But if any kind of thinking is quintessentially
+              Coloradan, it’s thinking outside the box — so we’ve rounded up seven fun, funky and totally unexpected</p>
+          </li>
+        </ul>
+      </ul>
+      <ul class="third-column">
+        <ul>
+          <li class="searchable">
+            <img src="images/new york.jpg" alt="New_york">
+            <h3>New York</h3>
+            <p>New York City, officially the City of New York, historically New Amsterdam, the Mayor, Alderman, and
+              Commonality of the City of New York, and New Orange, byname the Big Apple, city and port located at the
+              mouth of the Hudson River, southeastern New York state, northeastern U.S. It is the largest and most
+              influential American metropolis, encompassing Manhattan and Staten islands, the western sections of Long
+              Island, and a small portion of the New York state mainland to the north of Manhattan. New York</p>
+          </li>
+          <li class="searchable">
+            <img src="images/florida.jpg" alt="Florida">
+            <h3>Florida</h3>
+            <p>With beautiful beaches, fantastic weather, plenty of wildlife, fun theme parks, and fantastic food, it's
+              no wonder that Florida is an extremely popular destination for vacationers and snowbirds alike. Whether
+              you've been to Florida a thousand times or you're headed there for the first time, there are some classic
+              experiences that simply shouldn't be missed on this southern peninsula. Next time you're in the Sunshine
+              State, check out some of these fabulous experiences for a vacation you won't soon forget!</p>
+          </li>
+          <li class="searchable">
+            <img src="images/atlanta.jpg" alt="Atlanta">
+            <h3>Atlanta</h3>
+            <p>Although Atlanta Georgia is a popular and busy city with bright skylines, it is also a city in the woods,
+              filled with spacious green areas and charming neighborhoods. In Atlanta Georgia, you'll discover hidden
+              gems around every corner, including diverse restaurants, attractions, incredible art, and entertainment.
+              This Atlanta Georgia urban oasis is a multicultural paradise that exudes southern hospitality in its own
+              way. Atlanta Georgia is constantly reinventing itself and is among the most influential and friendly
+              cities in America.
+            </p>
+          </li>
+        </ul>
+
+      </ul>
+
+    </div>
+
+  </section>
+  <div class="foot">
+    <div class="container">
+      <footer>
+        <img class="logo" src="images/logo.svg" alt="logo"></li>
+        <div class="right-container">
+          <ul class="redes-sociales">
+            <li><a href="https://www.instagram.com/">
+                <img src="images/intagram.png" alt="Instagram">
+              </a>
+            </li>
+            <li><a href="https://twitter.com/">
+                <img src="images/twitter.png" alt="Twitter">
+              </a>
+            </li>
+            <li><a href="https://www.facebook.com/">
+                <img src="images/facebook.png" alt="Faceboook">
+              </a>
+            </li>
+          </ul>
+          <ul class="links-de-contactos">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-container">
+      <span class="close" id="modal-close">&times;</span>
+    </div>
+  </div>
+  <div class="modal-contents">
+
+    <div id="signin-content" class="modal-content">
+      <h4>Sign in</h4>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="signin-username" />
+        <label for="username">Password</label>
+        <input type="password" name="password" id="signin-password" />
+        <button id="signin-submit-button">Sign in</button>
+      </form>
+    </div>
+
+    <div id="signup-content" class="modal-content">
+      <h4>Sign up</h4>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="signup-username" />
+        <label for="username">Password</label>
+        <input type="password" name="password" id="signup-password" />
+        <label for="username">Email</label>
+        <input type="text" name="email" id="signup-email" />
+        <label for="username">Name</label>
+        <input type="text" name="name" id="signup-name" />
+        <label for="username">Date of Birth</label>
+        <input type="date" name="dob" id="signup-dob" />
+        <label for="username">Interests</label>
+        <select name="interests" multiple id="signup-interests">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+        <button id="signup-submit-button">Sign up</button>
+      </form>
+    </div>
+
+    <div id="map-area-content-0" class="modal-content">
+      <section class="maps">
+        <div class="container">
+          <h1>West Coast</h1>
+          <p>Some place between the beautiful shoreline and forested peaks there’s a West Coast experience waiting
+            everyone. From the Sunshine Coast to Vancouver Island and the Gulf Islands, and on to Prince Rupert, ther is
+            the sea and air, and feel inspired in every sense. Taste and sip your way through locally produced food,
+            wine, and craft beer, spark your creativity through a thriving arts and culture scene, and connect with
+            Indigenous cultures shaped over thousands of years.</p>
+          <img src="images/Westcoast.jpg" alt="west-coast">
+        </div>
+      </section>
+
+      <section class="photos-videos">
+        <h2>Photos and videos</h2>
+        <div class="container">
+          <ul class="first-column">
+            <img src="images/west-coast-1.jpg" alt="California">
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/eA8ZIURhigs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></iframe></li>
+          </ul>
+          <ul class="second-column">
+            <li><img src="images/west-coast-2.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/vUR4rxJ36h8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="third-column">
+            <li><img src="images/west-coast-3.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/bTvr_2v-0HI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="forth-column">
+            <li><img src="images/west-coast-4.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/fU1AUy8dASc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="fifth-column">
+            <li><img src="images/west-coast-5.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/sO5-oFuDPEA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div id="map-area-content-1" class="modal-content">
+      <section class="maps">
+        <div class="container">
+          <h1>Central area</h1>
+          <p>The central area isn't generally high on international tourists minds, except for Chicago,
+            as a place of interest. Generally thought of as being flat and dull, with row after
+            row of corn as "high as an elephant's eye." But the central ar includes some amazing sights
+            that are off the usual tourist track, and some of the great outdoor adventures for the camper, hiker or
+            kayaker.</p>
+          <img src="images/central-area.svg" alt="central area">
+        </div>
+      </section>
+
+      <section class="photos-videos">
+        <h2>Photos and videos</h2>
+        <div class="container">
+          <ul class="first-column">
+            <li><img src="images/central-area-1.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/NmBgCRVo-Yg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="second-column">
+            <li><img src="images/central-area-2.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/GFzIOdPc0JY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="third-column">
+            <li><img src="images/central-area-3.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/af3_jOwRNzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="forth-column">
+            <li><img src="images/central-area-4.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/f8qcYbswzRk"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="fifth-column">
+            <li><img src="images/central-area-5.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/ymanCOn-XVY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div id="map-area-content-2" class="modal-content">
+      <section class="maps">
+        <div class="container">
+          <h1>East Coast</h1>
+          <p>If you want to explore America’s past and sample some of its splendor, then you can’t go wrong with an East
+            Coast road trip!
+
+            On the East Coast, you’ll discover some of the most significant historical sites in the entire nation, not
+            to mention a huge array of landscapes and an even greater diversity of people.
+            While the West Coast gets most of the attention for its weather, natural beauty, and upbeat residents, the
+            East Coast is usually considered the foundation of the nation.
+
+            With this East Coast travel guide, you’ll be armed with everything you need to create your own scenic road
+            trip. We’ll cover a wide range of topics over the course of this article including some East Coast road trip
+            itineraries, food, lodgings, and sticking to a budget during your vehicular adventure.
+
+            We’ll also cover the top destinations to visit on an East Coast road trip, summer through winter.</p>
+          <img src="images/Eastcoast.svg" alt="east-coast">
+        </div>
+      </section>
+
+      <section class="photos-videos">
+        <h2>Photos and videos</h2>
+        <div class="container">
+          <ul class="first-column">
+            <li><img src="images/east-coast-1.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/sU_4nLQzhn4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="second-column">
+            <li><img src="images/east-coast-2.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/iB4XbL_PmzQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="third-column">
+            <li><img src="images/east-coast-3.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/g-FH4-kKJbE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="forth-column">
+            <li><img src="images/east-coast-4.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/eSekdlPKArg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></li>
+          </ul>
+          <ul class="fifth-column">
+            <li><img src="images/east-coast-5.jpg" alt="California"></li>
+            <li><iframe width="100%" height="300px" src="https://www.youtube.com/embed/AQ7_-PvAwwc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></iframe></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
